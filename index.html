@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh_Taza</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ملف CSS خارجي -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h2>Shop & Save</h2>
+    <div id="header-content">
+        <div id="logo">
+            <img src="new logo.jpg" alt="logo">
+        </div>
+        <div id="telegram">
+            <a href="https://telegram.org/dl" title="Contact us">
+                <i class="fa-brands fa-telegram"></i>
+                <span>Contact us at Telegram</span>
+            </a>
+        </div>
+    </div>
+    <hr>
+
+    <!-- 👇 زرار أقرب سوبر ماركت اتحط هنا -->
+    <button onclick="findNearest()">اعرف أقرب سوبر ماركت</button>
+    <p id="result"></p>
+</header>
+
+
+
+
+
+<main>
+
+
+   <form action="https://www.google.com/search" method="GET" target="_blank" class="search-form"> 
+        <input type="text" name="q" placeholder="ابحث في جوجل" class="search-input"> 
+        <button type="submit" class="search-btn">Search</button> 
+    </form>
+    <div class="main-flex">
+        <!-- البوكسات -->
+        <div class="container">
+            <div class="box">
+                <img src="D.jpg" alt="Danube">
+                <a href="https://danube.sa/brochures/?srsltid=AfmBOoonDhtev45bo5v3LRhT4FR8uDApgpkjBz01Z3Cz26xIWPc7TdO2" target="_blank"><h2>Danube</h2></a>
+            </div>
+            <div class="box">
+                <img src="O.jpg" alt="Othaim">
+                <a href="https://www.othaimmarkets.com/ar/offers" target="_blank"><h2>Othaimmarkets</h2></a>
+            </div>
+            <div class="box">
+                <img src="L.jpg" alt="luluhypermarket">
+                <a href="https://gcc.luluhypermarket.com/en-sa/grocery-food-cupboard/" target="_blank"><h2>luluhypermarkets</h2></a>
+            </div>
+            <div class="box">
+                <img src="C.jpg" alt="carrefour">
+                <a href="https://www.carrefourksa.com/mafsau/en/" target="_blank"><h2>carrefour</h2></a>
+            </div>
+            <div class="box">
+                <img src="T.png" alt="TamimiMarkets">
+                <a href="https://shop.tamimimarkets.com/en/" target="_blank"><h2>TamimiMarkets</h2></a>
+            </div>
+            <div class="box">
+                <img src="F.png" alt="FarmMarkets">
+                <a href="https://www.farm.com.sa/" target="_blank"><h2>FarmMarkets</h2></a>
+            </div>
+        </div>
+
+       <!-- قسم الدليفري -->
+<div class="delivery-form">
+  <h2>طلب الدليفري</h2>
+  <form action="https://formspree.io/f/mgvldkab" method="POST">
+    <!-- بيانات العميل -->
+    <label>👤 customerName:</label><br>
+    <input type="text" name="customerName" required><br><br>
+
+    <label>📞 No. number:</label><br>
+    <input type="text" name="phone" required><br><br>
+
+      <!-- زرار Accordion -->
+    <button type="button" class="accordion">اختر منتجاتك 🍅🥬🥔🧅🍏🍌</button>
+    <div class="panel">
+      <h3>🍅 Tomato</h3>
+      <label>Choose a market:</label>
+      <select name="tomato-store">
+        <option value="الدانوب">Danube</option>
+        <option value="المزرعة">Farm</option>
+        <option value="العثيم">Othaim</option>
+        <option value="التميمي">Tamimi</option>
+      </select>
+      <label> Kg : </label>
+      <input type="number" name="tomato-qty" min="1" value="1"><br><br>
+
+      <h3>🥬 Lettuce</h3>
+      <label>Choose a market:</label>
+      <select name="lettuce-store">
+        <option value="الدانوب">Danube</option>
+        <option value="المزرعة">Farm</option>
+        <option value="العثيم">Othaim</option>
+        <option value="التميمي">Tamimi</option>
+      </select>
+      <label> Kg : </label>
+      <input type="number" name="lettuce-qty" min="1" value="1"><br><br>
+
+      <h3>🥔 Potato</h3>
+      <label>Choose a market:</label>
+      <select name="potato-store">
+        <option value="الدانوب">Danube</option>
+        <option value="المزرعة">Farm</option>
+        <option value="العثيم">Othaim</option>
+        <option value="التميمي">Tamimi</option>
+      </select>
+      <label> Kg : </label>
+      <input type="number" name="potato-qty" min="1" value="1"><br><br>
+
+      <h3>🧅 Onion</h3>
+      <label>Choose a market:</label>
+      <select name="onion-store">
+        <option value="الدانوب">Danube</option>
+        <option value="المزرعة">Farm</option>
+        <option value="العثيم">Othaim</option>
+        <option value="التميمي">Tamimi</option>
+      </select>
+      <label> Kg : </label>
+      <input type="number" name="onion-qty" min="1" value="1"><br><br>
+
+      <h3>🍏 Apple</h3>
+      <label>Choose a market:</label>
+      <select name="apple-store">
+        <option value="الدانوب">Danube</option>
+        <option value="المزرعة">Farm</option>
+        <option value="العثيم">Othaim</option>
+        <option value="التميمي">Tamimi</option>
+      </select>
+      <label> Kg : </label>
+      <input type="number" name="apple-qty" min="1" value="1"><br><br>
+
+      <h3>🍌 Banana</h3>
+      <label>Choose a market:</label>
+      <select name="banana-store">
+        <option value="الدانوب">Danube</option>
+        <option value="المزرعة">Farm</option>
+        <option value="العثيم">Othaim</option>
+        <option value="التميمي">Tamimi</option>
+      </select>
+      <label> Kg : </label>
+      <input type="number" name="banana-qty" min="1" value="1"><br><br>
+    </div>
+
+    <!-- زرار الإرسال -->
+    <button type="submit">📨 إرسال الطلب</button>
+  </form>
+</div>
+</body>
+</html>
